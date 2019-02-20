@@ -74,7 +74,7 @@ export default class TabBar<T: *> extends React.Component<Props<T>, State> {
 
   static defaultProps = {
     getLabelText: ({ route }: Scene<T>) =>
-      typeof route.title === 'string' ? route.title.toUpperCase() : route.title,
+      typeof route.title === 'string' ? route.title : route.title,
     getAccessible: ({ route }: Scene<T>) =>
       typeof route.accessible !== 'undefined' ? route.accessible : true,
     getAccessibilityLabel: ({ route }: Scene<T>) => route.accessibilityLabel,
